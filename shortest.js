@@ -277,6 +277,7 @@ const get_visable = function ( circles, i, search_map ) {
   return visable;
 }
 
+/*
 let search_map = get_search_map( circles, triangles );
 let visable = get_visable( circles, 0, search_map );
 // 按距离排序后，总是近的遮住远的。O(n log n)
@@ -328,6 +329,7 @@ const A_star = function ( start ) {
     }
   }
 }
+*/
 
 const PriorityQueue = function ( compare ) {
   var compare = compare || function ( a, b ) {

@@ -1,10 +1,5 @@
 const plot_circles = ( canvas, circles, inner_circle, inside_convex_circle ) => {
-  let i = 0;
-  let timer = setInterval( () => {
-    if( i >= circles.length ) {
-      clearInterval( timer );
-      return;
-    }
+  for(let i=0;i<circles.length;i++){
     if( inner_circle && inner_circle[ i ] ) {
       canvas.plot( circles[ i ], "rgba(255,255,153,0.5)", 1,
         "rgba(255,255,153,0.5)" );
@@ -15,8 +10,7 @@ const plot_circles = ( canvas, circles, inner_circle, inside_convex_circle ) => 
       canvas.plot( circles[ i ], "rgba(155,255,255,0.5)", 1,
         "rgba(155,255,255,0.5)" );
     }
-    i++;
-  }, 100 );
+  }
 }
 
 const plot_start_end = ( canvas, start, end ) => {
@@ -69,11 +63,4 @@ const plot_triangles = ( canvas, points, triangles, baseTriangle ) => {
       canvas.plot( new Triangle( triangle.map( p => p < 0 ? base[ p + 3 ] :
         points[ p ] ) ), 'rgba(200, 0, 200, 0.67)', 0.5 );
     } );
-}
-const plot_scene_1 = ( canvas, circles, strat, end ) => {
-  canvas.clear();
-  for( c of circles ) {
-    canvas.plot( c );
-  }
-  plot_start_end( canvas, start, end );
 }

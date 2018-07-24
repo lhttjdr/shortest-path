@@ -8,10 +8,17 @@
 <body>
     <canvas id="myCanvas" style="float:left;" width="900" height="600"></canvas>
     <div style="float:left;width:300px;">
-        <label>圆的个数，默认为100(number of circles, default is 100)：<input id="N" type="text"></input>
+        Steps
     <hr/>
-  <div><p id="info"></p><p id="info_e"></p><p id="time"></p><p>点击图片，进入下一步。按空格键可重新生成数据。(Click the figure to go next. Press space bar to regenerate data.)</p></div>
-</div>
+    <ol>
+        <li>generate circles, start/end points</li>
+        <li>find overlapped circles, remove inner circles (not accessible)</li>
+        <li>overlapped circles forms groups</li>
+        <li>for each group, calculate the convex hull</li>
+        <li>triangulation <b>TODO: For a circle, how to find out visiable circles?</b></li>
+        <li>A* shortest path algorithm</li>
+    </ol>
+    </div>
 <script src="geometry.js" type="text/javascript"></script>
 <script src="plot.js" type="text/javascript"></script>
 <script src="helper.js" type="text/javascript"></script>

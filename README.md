@@ -1,5 +1,9 @@
 # shortest path problem with circle obstacles
 
+**ongoing project**
+
+[Demo](https://lhttjdr.github.io/shortest-path/)
+
 - [X] plot tools (HTML5 canvas)
 - [X] adjacent map of obstacles (can not walk through "wall")
 - [X] convex hull of circles (avoid enter convex hull unless start point or destination point are in them)
